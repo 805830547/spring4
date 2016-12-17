@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.zhangzq.helloworld.persistence.StudentDao">
+    <insert id="setStudent" parameterType="com.zhangzq.helloworld.model.Student">
+        INSERT INTO
+            message
+            (
+            name,
+            age
+            )
+        VALUES
+        <foreach collection="list" item="student" index="index" open="(" close=")" separator="),(">
+            #{student.name}, #{student.age}
+        </foreach>
+    </insert>
+    <select id="getStudent" resultType="com.zhangzq.helloworld.model.Student">
+        select * from message
+    </select>
+</mapper>

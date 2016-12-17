@@ -1,1 +1,22 @@
 @charset "utf-8";
+
+.student {
+	width: 400px;
+	height: 300px;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left:100px;
+}
+.mystyle {
+	width: 300px;
+}
+
+.span {
+    width: 20% !important;
+}
+
+.strong {
+	font-size:50px;
+	color:red;
+}
